@@ -446,373 +446,13 @@
           📋 요구사항 정의서
         </button>
         <button class="nav-tab" onclick="showTab('gantt')">📊 간트차트</button>
+        <button class="nav-tab" onclick="showTab('architecture')">
+          🏗️ 설계도
+        </button>
+        <button class="nav-tab" onclick="showTab('erd')">🗄️ ERD</button>
       </div>
 
       <div class="content">
-        <!-- 간트차트 탭 -->
-        <div id="gantt" class="tab-content">
-          <div class="stats">
-            <div class="stat-card">
-              <div class="stat-number">4</div>
-              <div class="stat-label">개월 기간</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">4</div>
-              <div class="stat-label">최대 팀원</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">3</div>
-              <div class="stat-label">주요 단계</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">내재화 목표</div>
-            </div>
-          </div>
-
-          <div class="team-info">
-            <h3>📋 팀 구성 (4명 이하)</h3>
-            <div class="team-grid">
-              <div class="team-member">
-                <h4>📊 PM/기획</h4>
-                <p>프로젝트 관리, 요구사항 분석, 품질 관리</p>
-              </div>
-              <div class="team-member">
-                <h4>🔧 풀스택 개발</h4>
-                <p>Laravel 백엔드 총괄, 시스템 아키텍처 설계, 기술 리더십</p>
-              </div>
-              <div class="team-member">
-                <h4>🎨 프론트엔드/UI 개발</h4>
-                <p>Vue.js/React 개발, 반응형 웹, UX/UI 최적화</p>
-              </div>
-              <div class="team-member">
-                <h4>🗄️ DB/인프라 엔지니어</h4>
-                <p>DB 설계/최적화, AWS 인프라, DevOps 및 배포</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="legend">
-            <h4>📌 단계별 색상 구분</h4>
-            <div class="legend-item">
-              <div class="legend-color phase1"></div>
-              <span>1단계: 핵심 기능 개발</span>
-            </div>
-            <div class="legend-item">
-              <div class="legend-color phase2"></div>
-              <span>2단계: 확장 기능 개발</span>
-            </div>
-            <div class="legend-item">
-              <div class="legend-color phase3"></div>
-              <span>3단계: 최적화 및 안정화</span>
-            </div>
-          </div>
-
-          <!-- 1단계: 핵심 기능 개발 -->
-          <div class="phase critical">
-            <div class="phase-header">
-              <span>🔥 1단계: 핵심 기능 개발</span>
-              <div class="phase-duration">9월 ~ 10월 중순 (1.5개월)</div>
-            </div>
-            <div class="gantt-container">
-              <table class="gantt-table">
-                <thead>
-                  <tr>
-                    <th class="gantt-header">작업 항목</th>
-                    <th class="gantt-header">9월 상</th>
-                    <th class="gantt-header">9월 하</th>
-                    <th class="gantt-header">10월 상</th>
-                    <th class="gantt-header">10월 하</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="task-name">프로젝트 기획 및 요구사항 분석</td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">기획</div>
-                    </td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">시스템 아키텍처 설계</td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">설계</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">설계</div>
-                    </td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">개발 환경 구축 (Laravel 8.x)</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">구축</div>
-                    </td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">사용자 관리 시스템</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">개발</div>
-                    </td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">기본 대시보드</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">개발</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">작업 스케줄링 (기내청소)</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">개발</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">기본 알림 시스템</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">개발</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">반응형 웹 구현</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase1">구현</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- 2단계: 확장 기능 개발 -->
-          <div class="phase">
-            <div class="phase-header">
-              <span>🚀 2단계: 확장 기능 개발</span>
-              <div class="phase-duration">10월 중순 ~ 11월 (1.5개월)</div>
-            </div>
-            <div class="gantt-container">
-              <table class="gantt-table">
-                <thead>
-                  <tr>
-                    <th class="gantt-header">작업 항목</th>
-                    <th class="gantt-header">10월 하</th>
-                    <th class="gantt-header">11월 상</th>
-                    <th class="gantt-header">11월 중</th>
-                    <th class="gantt-header">11월 하</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="task-name">다영역 조업 지원</td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">평가 시스템 (NPS)</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">교육 관리 시스템</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">고급 리포팅 기능</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">카카오톡 알림 연동</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">연동</div>
-                    </td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">작업시간 예측 알고리즘</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase2">개발</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- 3단계: 최적화 및 안정화 -->
-          <div class="phase">
-            <div class="phase-header">
-              <span>🎯 3단계: 최적화 및 안정화</span>
-              <div class="phase-duration">12월 (1개월)</div>
-            </div>
-            <div class="gantt-container">
-              <table class="gantt-table">
-                <thead>
-                  <tr>
-                    <th class="gantt-header">작업 항목</th>
-                    <th class="gantt-header">12월 1주</th>
-                    <th class="gantt-header">12월 2주</th>
-                    <th class="gantt-header">12월 3주</th>
-                    <th class="gantt-header">12월 4주</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="task-name">인력 매칭 시스템 (선택적)</td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">개발</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">개발</div>
-                    </td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">성능 최적화</td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">최적화</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">최적화</div>
-                    </td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">보안 강화</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">강화</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">강화</div>
-                    </td>
-                    <td class="month-cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">전체 통합 테스트</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">테스트</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">테스트</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">사용성 개선</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">개선</div>
-                    </td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">개선</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">운영 안정화</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">안정화</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="task-name">문서화 및 인수인계</td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell"></td>
-                    <td class="month-cell">
-                      <div class="task-bar phase3">완료</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="legend">
-            <h4>⚠️ 중요 고려사항</h4>
-            <ul>
-              <li><strong>인력 매칭 기능:</strong> 내부 기준 정립 후 구현</li>
-              <li>
-                <strong>기간 압박:</strong> 4개월 단기간 내 완성을 위한 우선순위
-                기반 개발
-              </li>
-              <li>
-                <strong>팀 최소화:</strong> 3-4명 소수 정예로 효율성 극대화
-              </li>
-              <li>
-                <strong>기술 검증:</strong> Laravel 기반 완전 재구축으로 안정성
-                확보
-              </li>
-            </ul>
-          </div>
-        </div>
-
         <!-- 요구사항 정의서 탭 -->
         <div id="requirements" class="tab-content active">
           <div class="requirements-section">
@@ -1247,6 +887,376 @@
             </div>
           </div>
         </div>
+
+        <!-- 간트차트 탭 -->
+        <div id="gantt" class="tab-content">
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-number">4</div>
+              <div class="stat-label">개월 기간</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">4</div>
+              <div class="stat-label">최대 팀원</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">3</div>
+              <div class="stat-label">주요 단계</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">내재화 목표</div>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>📋 팀 구성 (4명 이하)</h3>
+            <div class="team-grid">
+              <div class="team-member">
+                <h4>📊 PM/기획</h4>
+                <p>프로젝트 관리, 요구사항 분석, 품질 관리</p>
+              </div>
+              <div class="team-member">
+                <h4>🔧 풀스택 개발</h4>
+                <p>Laravel 백엔드 총괄, 시스템 아키텍처 설계, 기술 리더십</p>
+              </div>
+              <div class="team-member">
+                <h4>🎨 프론트엔드/UI 개발</h4>
+                <p>Vue.js/React 개발, 반응형 웹, UX/UI 최적화</p>
+              </div>
+              <div class="team-member">
+                <h4>🗄️ DB/인프라 엔지니어</h4>
+                <p>DB 설계/최적화, AWS 인프라, DevOps 및 배포</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="legend">
+            <h4>📌 단계별 색상 구분</h4>
+            <div class="legend-item">
+              <div class="legend-color phase1"></div>
+              <span>1단계: 핵심 기능 개발</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color phase2"></div>
+              <span>2단계: 확장 기능 개발</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color phase3"></div>
+              <span>3단계: 최적화 및 안정화</span>
+            </div>
+          </div>
+
+          <!-- 1단계: 핵심 기능 개발 -->
+          <div class="phase critical">
+            <div class="phase-header">
+              <span>🔥 1단계: 핵심 기능 개발</span>
+              <div class="phase-duration">9월 ~ 10월 중순 (1.5개월)</div>
+            </div>
+            <div class="gantt-container">
+              <table class="gantt-table">
+                <thead>
+                  <tr>
+                    <th class="gantt-header">작업 항목</th>
+                    <th class="gantt-header">9월 상</th>
+                    <th class="gantt-header">9월 하</th>
+                    <th class="gantt-header">10월 상</th>
+                    <th class="gantt-header">10월 하</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="task-name">프로젝트 기획 및 요구사항 분석</td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">기획</div>
+                    </td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">시스템 아키텍처 설계</td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">설계</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">설계</div>
+                    </td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">개발 환경 구축 (Laravel 8.x)</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">구축</div>
+                    </td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">사용자 관리 시스템</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">개발</div>
+                    </td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">기본 대시보드</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">개발</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">작업 스케줄링 (기내청소)</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">개발</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">기본 알림 시스템</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">개발</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">반응형 웹 구현</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase1">구현</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 2단계: 확장 기능 개발 -->
+          <div class="phase">
+            <div class="phase-header">
+              <span>🚀 2단계: 확장 기능 개발</span>
+              <div class="phase-duration">10월 중순 ~ 11월 (1.5개월)</div>
+            </div>
+            <div class="gantt-container">
+              <table class="gantt-table">
+                <thead>
+                  <tr>
+                    <th class="gantt-header">작업 항목</th>
+                    <th class="gantt-header">10월 하</th>
+                    <th class="gantt-header">11월 상</th>
+                    <th class="gantt-header">11월 중</th>
+                    <th class="gantt-header">11월 하</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="task-name">다영역 조업 지원</td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">평가 시스템 (NPS)</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">교육 관리 시스템</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">고급 리포팅 기능</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">카카오톡 알림 연동</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">연동</div>
+                    </td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">작업시간 예측 알고리즘</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase2">개발</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 3단계: 최적화 및 안정화 -->
+          <div class="phase">
+            <div class="phase-header">
+              <span>🎯 3단계: 최적화 및 안정화</span>
+              <div class="phase-duration">12월 (1개월)</div>
+            </div>
+            <div class="gantt-container">
+              <table class="gantt-table">
+                <thead>
+                  <tr>
+                    <th class="gantt-header">작업 항목</th>
+                    <th class="gantt-header">12월 1주</th>
+                    <th class="gantt-header">12월 2주</th>
+                    <th class="gantt-header">12월 3주</th>
+                    <th class="gantt-header">12월 4주</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="task-name">인력 매칭 시스템 (선택적)</td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">개발</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">개발</div>
+                    </td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">성능 최적화</td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">최적화</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">최적화</div>
+                    </td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">보안 강화</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">강화</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">강화</div>
+                    </td>
+                    <td class="month-cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">전체 통합 테스트</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">테스트</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">테스트</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">사용성 개선</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">개선</div>
+                    </td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">개선</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">운영 안정화</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">안정화</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="task-name">문서화 및 인수인계</td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell"></td>
+                    <td class="month-cell">
+                      <div class="task-bar phase3">완료</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="legend">
+            <h4>⚠️ 중요 고려사항</h4>
+            <ul>
+              <li><strong>인력 매칭 기능:</strong> 내부 기준 정립 후 구현</li>
+              <li>
+                <strong>기간 압박:</strong> 4개월 단기간 내 완성을 위한 우선순위
+                기반 개발
+              </li>
+              <li>
+                <strong>팀 최소화:</strong> 3-4명 소수 정예로 효율성 극대화
+              </li>
+              <li>
+                <strong>기술 검증:</strong> Laravel 기반 완전 재구축으로 안정성
+                확보
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 설계도 탭 -->
+        <div id="architecture" class="tab-content"></div>
+
+        <!-- ERD 탭 -->
+        <div id="erd" class="tab-content"></div>
       </div>
     </div>
 
