@@ -1254,13 +1254,234 @@
 
         <!-- 설계도 탭 -->
         <div id="architecture" class="tab-content">
-          <h2>플랫폼 아키텍처 설계도</h2>
+          <div class="requirements-section">
+            <div class="requirements-header">🏗️ 시스템 아키텍처 설계도</div>
+            <div class="requirements-content">
+              <h2>1. 전체 시스템 아키텍처</h2>
+
+              <div class="architecture-diagram">
+                <div class="layer">
+                  <div>프레젠테이션 계층 (Presentation Layer)</div>
+                  <div class="layer-content">
+                    <div class="component">
+                      관리자 대시보드<br />(Laravel Blade + Vue.js)
+                    </div>
+                    <div class="component">
+                      사용자 인터페이스<br />(반응형 웹)
+                    </div>
+                    <div class="component">모바일 앱<br />(PWA)</div>
+                    <div class="component">API 문서<br />(Swagger)</div>
+                  </div>
+                </div>
+
+                <div class="layer">
+                  <div>비즈니스 로직 계층 (Business Logic Layer)</div>
+                  <div class="layer-content">
+                    <div class="component">
+                      인증/권한<br />(Laravel Sanctum)
+                    </div>
+                    <div class="component">
+                      작업 스케줄링<br />(Laravel Queue)
+                    </div>
+                    <div class="component">알림 시스템<br />(WebSocket)</div>
+                    <div class="component">AI 분석 엔진<br />(GPT API)</div>
+                  </div>
+                </div>
+
+                <div class="layer">
+                  <div>애플리케이션 계층 (Application Layer)</div>
+                  <div class="layer-content">
+                    <div class="component">Laravel 8.x<br />(PHP 8.3)</div>
+                    <div class="component">RESTful API</div>
+                    <div class="component">
+                      WebSocket Server<br />(Laravel WebSocket)
+                    </div>
+                    <div class="component">
+                      Task Scheduler<br />(Laravel Scheduler)
+                    </div>
+                  </div>
+                </div>
+
+                <div class="layer">
+                  <div>데이터 계층 (Data Layer)</div>
+                  <div class="layer-content">
+                    <div class="component">MySQL 8.0<br />(MariaDB)</div>
+                    <div class="component">Redis Cache</div>
+                    <div class="component">AWS S3<br />(파일 저장)</div>
+                    <div class="component">Elasticsearch<br />(검색/로그)</div>
+                  </div>
+                </div>
+
+                <div class="layer">
+                  <div>인프라 계층 (Infrastructure Layer)</div>
+                  <div class="layer-content">
+                    <div class="component">AWS EC2<br />(웹서버)</div>
+                    <div class="component">AWS RDS<br />(데이터베이스)</div>
+                    <div class="component">AWS CloudFront<br />(CDN)</div>
+                    <div class="component">Nginx<br />(로드밸런서)</div>
+                  </div>
+                </div>
+              </div>
+
+              <h2>2. 데이터 플로우 다이어그램</h2>
+
+              <div class="flow-diagram">
+                <h3>📱 사용자 요청 처리 흐름</h3>
+                <div style="text-align: center; padding: 20px">
+                  <div class="flow-step">사용자 요청</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">Nginx<br />로드밸런서</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">Laravel<br />라우터</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">컨트롤러<br />처리</div>
+                  <br /><br />
+                  <div class="flow-step">응답 반환</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">뷰 렌더링</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">비즈니스<br />로직 실행</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">데이터<br />처리</div>
+                </div>
+              </div>
+
+              <div class="flow-diagram">
+                <h3>⚡ 실시간 알림 처리 흐름</h3>
+                <div style="text-align: center; padding: 20px">
+                  <div class="flow-step">이벤트 발생</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">Laravel<br />Broadcasting</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">WebSocket<br />서버</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">클라이언트<br />수신</div>
+                  <br /><br />
+                  <div class="flow-step">카카오톡<br />알림</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">외부 API<br />호출</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">큐 작업<br />처리</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">알림 큐<br />등록</div>
+                </div>
+              </div>
+
+              <h2>3. 보안 아키텍처</h2>
+
+              <div class="tech-stack">
+                <div class="tech-item">
+                  <strong>🔐 인증/인가</strong><br />
+                  Laravel Sanctum + JWT<br />
+                  다중 권한 레벨 (관리자/팀장/작업자)<br />
+                  OAuth 소셜 로그인
+                </div>
+                <div class="tech-item">
+                  <strong>🛡️ 데이터 보호</strong><br />
+                  AES-256 데이터 암호화<br />
+                  SSL/TLS 전송 암호화<br />
+                  민감정보 마스킹
+                </div>
+                <div class="tech-item">
+                  <strong>🚫 공격 방어</strong><br />
+                  CSRF/XSS 방어<br />
+                  Rate Limiting<br />
+                  SQL Injection 방지
+                </div>
+                <div class="tech-item">
+                  <strong>📊 모니터링</strong><br />
+                  접근 로그 관리<br />
+                  실시간 위협 탐지<br />
+                  보안 이벤트 알림
+                </div>
+              </div>
+
+              <h2>4. 성능 최적화 전략</h2>
+
+              <div class="architecture-diagram">
+                <div class="layer">
+                  <div>캐싱 전략 (Caching Strategy)</div>
+                  <div class="layer-content">
+                    <div class="component">Redis 인메모리<br />캐싱</div>
+                    <div class="component">Laravel Cache<br />파사드 활용</div>
+                    <div class="component">데이터베이스<br />쿼리 캐싱</div>
+                    <div class="component">CDN 정적<br />파일 캐싱</div>
+                  </div>
+                </div>
+
+                <div class="layer">
+                  <div>데이터베이스 최적화 (Database Optimization)</div>
+                  <div class="layer-content">
+                    <div class="component">인덱스<br />최적화</div>
+                    <div class="component">쿼리<br />최적화</div>
+                    <div class="component">읽기 전용<br />복제본</div>
+                    <div class="component">파티셔닝</div>
+                  </div>
+                </div>
+
+                <div class="layer">
+                  <div>부하 분산 (Load Balancing)</div>
+                  <div class="layer-content">
+                    <div class="component">Nginx<br />로드밸런서</div>
+                    <div class="component">다중 서버<br />인스턴스</div>
+                    <div class="component">세션<br />클러스터링</div>
+                    <div class="component">큐 작업<br />분산</div>
+                  </div>
+                </div>
+              </div>
+
+              <h2>5. 배포 및 운영 아키텍처</h2>
+
+              <div class="flow-diagram">
+                <h3>🚀 CI/CD 파이프라인</h3>
+                <div style="text-align: center; padding: 20px">
+                  <div class="flow-step">Git Push</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">GitHub<br />Actions</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">자동 테스트<br />실행</div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step">빌드<br />생성</div>
+                  <br /><br />
+                  <div class="flow-step">운영 서버<br />배포</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">스테이징<br />테스트</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">Docker<br />이미지 생성</div>
+                  <span class="flow-arrow">←</span>
+                  <div class="flow-step">패키지<br />빌드</div>
+                </div>
+              </div>
+
+              <div class="highlight-box">
+                <h4>🎯 아키텍처 설계 핵심 원칙</h4>
+                <ul>
+                  <li>
+                    <strong>확장성:</strong> 마이크로서비스 지향 설계로 향후
+                    확장 대비
+                  </li>
+                  <li>
+                    <strong>안정성:</strong> 이중화 구성 및 장애 복구 시스템
+                  </li>
+                  <li>
+                    <strong>보안성:</strong> 계층별 보안 적용 및 데이터 암호화
+                  </li>
+                  <li><strong>성능:</strong> 캐싱 전략 및 최적화 기법 적용</li>
+                  <li>
+                    <strong>유지보수성:</strong> 모듈화된 구조 및 표준화된 코드
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- ERD 탭 -->
         <div id="erd" class="tab-content">
           <h2>ERD</h2>
         </div>
+
+      </div>
       </div>
     </div>
 
